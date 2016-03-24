@@ -3,8 +3,9 @@ logger: function (req, res, next) {
 console.log('Hello');
 next()
 },
-loginRequired: function () {
+loginRequired: function (req, res, next) {
 console.log('Private');
+next();
 }
 };
 
